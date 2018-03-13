@@ -43,7 +43,7 @@ namespace SqlReflectTest.DataMappers
         protected override string SqlInsert(object target)
         {
             Region r = (Region)target;
-            string values = "'" + r.RegionDescription + "'" ;
+            string values =  + r.RegionID + ", '" + r.RegionDescription + "'" ;
             return SQL_INSERT + "(" + values + ")";
         }
 
